@@ -160,7 +160,7 @@ export default function DashboardPage() {
                             <text className='text-xl text-gray-500 font-bold'>Persentase Penjualan Obat</text>
                         </div>
                         <div>
-<ChartPenjualan/>
+                            {/* <ChartPenjualan /> */}
                         </div>
                     </div>
                 </div>
@@ -188,13 +188,12 @@ function ChartSales() {
 
     useEffect(() => {
         setChartData({
-            labels: ["John", "Kevin", "Geroge", "Micheal", "Oreo"],
+            labels: ["Jan", "Feb", "mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
             datasets: [
                 {
-                    label: "Whom'st let the dogs out",
-                    data: [12, 55, 34, 120, 320],
-                    borderColor: "rgb(53, 162, 235)",
-                    backgroundColor: "rgba(53, 162, 235, 0.4)",
+                    label: "Sales",
+                    data: [12, 55, 34, 120, 320, 220, 120, 280, 40, 60,20, 310],
+                    backgroundColor: "#3b82f6",
                 },
             ],
         });
@@ -202,11 +201,7 @@ function ChartSales() {
             responsive: true,
             plugins: {
                 legend: {
-                    position: "top",
-                },
-                title: {
-                    display: true,
-                    text: "Whom'st let the dogs out",
+                    position: "bottom",
                 },
             },
         });
